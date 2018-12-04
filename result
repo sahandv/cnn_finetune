@@ -1,0 +1,14 @@
+Predicted      0     1    All
+Actual                       
+0.0        20243   344  20587
+1.0          599  4057   4656
+All        20842  4401  25243
+
+TN:20243	FP:344
+FN:599		TP:4057
+
+[0.9832904259969883, 0.8713487972508591]
+Accuracy = TP+TN/TP+FP+FN+TN 96.26%
+Precision = TP/TP+FP 92.18%
+Recall = TP/TP+FN  87.13%
+F1 Score = 2*(Recall * Precision) / (Recall + Precision)  0.8958
