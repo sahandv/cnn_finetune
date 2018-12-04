@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os; os.environ['KERAS_BACKEND'] = 'theano'
 
 from keras.optimizers import SGD
 from keras.layers import Input, Dense, Convolution2D, MaxPooling2D, AveragePooling2D, ZeroPadding2D, Dropout, Flatten, merge, Reshape, Activation
