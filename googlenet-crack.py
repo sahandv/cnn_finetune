@@ -37,3 +37,19 @@ import pandas as pd
 
 from subprocess import check_output
 K.set_image_dim_ordering('th')
+
+
+
+    
+X = np.zeros(shape=(int(x_train_raw.shape[0]),img_rows,img_cols,3))
+Y = np.zeros(shape=x_train_raw.shape[0])
+i = 0
+for f in tqdm(x_train_raw.shape[0]):
+    if os.path.isfile(f):
+        img = cv2.imread(f)
+        img = cv2.resize(img, (img_rows,img_cols))
+        if rev_image == True:
+            img = cv2.bitwise_not(img)
+        X[i, :, :, :]=img
+        Y[i] = y_train[i]
+        i = i + 1
